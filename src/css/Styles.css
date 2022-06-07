@@ -3,74 +3,161 @@
   padding: 0;
   box-sizing: border-box;
 }
-.navbar{
-    padding: 20px;
-    background-color: #fff;
-    text-align: center;
+.navbar {
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+  width: 100%;
+}
+.navbar ul {
+  list-style: none;
+}
+.navbar ul li {
+  display: inline;
+  margin-left: 20px;
+}
+.navbar ul li a {
+  font-family: verdana;
+  font-size: 12pt;
+  text-decoration: none;
+  color: #000;
+  transition: ease 0.5s;
+}
+.navbar ul li a:hover {
+  color: #c3c3c3;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #fff;
+  justify-content: center;
+}
+.cards {
+  width: 30vw;
+  height: 60vh;
+  border: 1px solid silver;
+}
+.panel {
+  width: 65vw;
+  height: 60vh;
+  border: 1px solid silver;
+}
+.waitlist,
+.plans,
+.balance {
+  width: 20vw;
+  height: 50vh;
+  margin: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px 2px #c3c3c3;
+  margin-top: -50px;
+  background-color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+.cards img {
+  width: 110px;
+  height: 110px;
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+.cards img:hover {
+  margin-left: 20px;
+}
+.balance p {
+  margin: 10px;
+  font-weight: bold;
+}
+.valuebalance {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.valuebalance p {
+  margin: 10px;
+}
+.plans h2 {
+  font-family: 12pt;
+}
+.plans h3 {
+  margin: 10px;
+  color: silver;
+  font-size: 10pt;
+}
+.plans a {
+  padding: 10px;
+  background-color: orange;
+  color: #fff;
+  border-radius: 5pt;
+  margin-top: 50px;
+  display: block;
+  text-decoration: none;
+}
+.waitlist div {
+  background-color: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  margin-top: -80px;
+  box-shadow: 0px 0px 2px black;
+  padding: 10px;
+  padding-top: 15px;
+  text-align: center;
+  margin-left: 30%;
+}
+.waitlist div img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.waitlist input{
+    padding: 10px;
+    background-color:beige;
+    border-radius: 10px;
+    margin-top: 50px;
+    border: 0px;
+    margin-bottom: 30px;
     width: 100%;
 }
-.navbar ul{
-    list-style: none;
-}
-.navbar ul li{
-    display: inline;
-    margin-left: 20px;
-}
-.navbar ul li a{
-    font-family: verdana;
+.waitlist a{
+    padding: 10px;
     font-size: 12pt;
+    background-color: #fa3f6c;
+    color: #fff;
     text-decoration: none;
-    color: #000;
-    transition: ease .5s;
+    margin-top: 10px;
+    border-radius: 10px;
+    display:block;
+    width: 100%;
 }
-.navbar ul li a:hover{
-    color: #c3c3c3;
-}
-.container{
+.waitlist p{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    font-size: 13pt;
+    font-size: center;
+}
+.linha{
+    position: relative;
+    width: 200px;
+    top:40px;
+}
+.login{
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: #fff;
-    justify-content: center;
+    z-index: 1000;
+    width: 100vw;
+    height: 150vh;
+    text-align: center;
+    padding-top: 100px;
 }
-.cards{
-    width: 30vw;
-    height: 60vh;
-    border: 1px solid silver;
-}
-.panel{
-    width: 65vw;
-    height: 60vh;
-    border: 1px solid silver;
-}
-.waitlist, .plans, .balance{
-    width: 20vw;
-    height: 50vh;
-    margin: 30px;
-    border-radius: 12px;
-    box-shadow: 0px 0px 10px 2px #c3c3c3;
-    margin-top: -50px;
-    background-color: #fff;
-    padding: 50px;
-}
-.cards img{
-    width: 110px;
-    height: 110px;
-    cursor: pointer;
-    transition: ease 0.5s;
-}
-.cards img:hover{
-    margin-left: 20px;
-}
-.balance p{
+.login input{
     margin: 10px;
-    font-weight: bold;
+    padding: 10px;
 }
-.valuebalance{
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
-}
-.valuebalance p{
+.login button{
+    padding: 10px;
     margin: 10px;
 }
