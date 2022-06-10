@@ -15,7 +15,7 @@ function efetuarLogin(){
     const pass = document.getElementById("password");
 
     if(user.value ==="" || user.value === null || pass.value === "" || pass.value === null){
-        return alert("Nome de usuário ou senha não podem ficar em branco");
+        return alert("Username or password cannot be blank");
     }
     fetch("http://10.26.49.21:5001/api/users/login",{
         method: "POST",
@@ -30,6 +30,12 @@ function efetuarLogin(){
     }).then((result)=> result.json())
     .then((rs)=>{
         console.log(rs);
+        if(rs.token=== "" || rs.token === null){
+            return alert("Fail at login");
+        }
+            else{
+                document.getElementsByClassName("login")[0].style.display="none";
+            }
     })
     .catch((err) => console.error(`Error Internal -> ${err}`))
 }
